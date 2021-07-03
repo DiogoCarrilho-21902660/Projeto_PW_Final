@@ -1,0 +1,335 @@
+{% extends 'projeto/base.html' %}
+{% load static %}
+{% block main %}
+ <div class="main">
+                <main>
+                    <br><h2>Acerca do Website</h2>
+                    <br><h2>Técnicas usadas</h2>
+                    <p class="textTabela">
+                        <ul>
+                            <li style="text-align: justify;">
+                                <p>Esta parte irá seguir a ordem do “nav” /Menu do website:</p>
+                                <ul>
+                                    <li><p>Geral em todas as páginas, ou seja, a forma como estruturamos, esquematizamos e formatamos o nosso website:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Primeiramente, aparece uma imagem destacada e, por conseguinte, esta acompanha todas as páginas aparecendo no início e
+                                                fim de cada página. Esta imagem foi colocada por detrás do conteúdo de forma que todo o
+                                                conteúdo apresentado em todas as páginas estivesse destacado. Isto é possível utilizando um “parallax” e respetivas formatações;</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Ao acompanhar todo o conteúdo de cada página existem dois elementos permanentes: 1) “article” localizado à esquerda da página, onde toda a informação
+                                                    está acomodada, isto é, onde os visitantes poderão ir aos sites de classificação/review para obterem as “scores” deste jogo (justificação das “scores”).
+                                                    Se não quiserem ir aos sites, podem apenas observar as imagens das respetivas “scores”. Como se pode observar, este conteúdo possui animações que torna
+                                                    o mesmo mais divertido. 2) “aside” localizado à direita da página, onde estão apresentados quatro canais (e respetivos links com “SVG” que mudam gradualmente de cor
+                                                    correspondente ao esquema das marcas) onde os visitantes poderão ir comprar o jogo na sua plataforma ou comparar preços/promoções;
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Relativamente à palete de cores do website seguimos o próprio esquema de cores do jogo, onde usámos um cinzento-escuro como cor principal,
+                                                    um vermelho-escuro como cor secundária (de forma a dar um contraste às partes interessantes) e,
+                                                    por fim, um cinzento-prateado para o texto e para o contorno das
+                                                    imagens (de forma a dar um contraste bastante legível em comparação com o fundo escuro);
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Complementando o ponto anterior no elemento “nav”, usámos o vermelho como cor principal das imagens, e o mesmo cinzento-prateado para
+                                                    o texto (hiperlinks não utilizados). Quando passamos por cima dos links estes passam a vermelho e o fundo passa a cinzento-prateado
+                                                    criando um contraste agradável à visão.
+                                                    Quando estes links são ativados passam para a cor laranja (uma cor chamativa, mas que nesta situação não é muito visível);
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Relativamente ao texto e à sua formatação, esta é constituída por um alinhamento
+                                                    justificado (incluindo “text-justify: inter-word”) com uma fonte de “1.2vw”.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><p>Introdução/”index.html”- Na página inicial tivemos a ideia de criar uma introdução ao jogo, uma vez que este site é um “review” do jogo. Sendo assim foi utilizado:</p>
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    Um “iframe” onde incluímos um vídeo de um trailer para cativar os visitantes;
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Mesmo não sendo obrigatório/pedido, utilizámos uma função “áudio” para a inclusão de algumas das músicas do “SoundTrack” do jogo.
+                                                    Este elemento tem dois scripts, um para repetir automaticamente quando termina e outro para começar com o som baixo.
+                                                     Contudo, este elemento não funciona em todos os browsers de forma automática, ou seja, tem de ser ativado manualmente (ex: Google Chrome);
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Por fim, colocámos um pequeno parágrafo com uma síntese da história, para os visitantes terem mais informação, de forma a serem cativados.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><p>Acerca do Jogo/”about.html”- Neste ponto são apresentadas as informações técnicas do jogo e quem participou na sua criação e publicação. Por isso foi utilizado:</p>
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    Uma “flex-box” onde inserimos o Publisher e o Developer com as respetivas imagens (centradas lado a lado devido à “flex-box”) das suas marcas.
+                                                    Estas estão inseridas de forma a respeitar o que é pedido neste projeto, como também incluímos os links às páginas das respetivas empresas;
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Por fim, incluímos os requerimentos mínimos e máximos para correr o jogo, como também um parágrafo referente às questões de legalidade.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><p>A nossa opinião/”ouropinion.html”- Esta será a parte fulcral do nosso projeto, uma vez que será aqui onde damos a nossa opinião durante o tempo que jogámos este jogo e, por isso, será uma das formas dos visitantes puderem aceder a opiniões de consumidores, tal como eles o poderão vir a ser. Com isto utilizou-se:</p>
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    Uma variedade de parágrafos com “headers” relativos a cada área da nossa análise.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><p>Imagens/”multimédiaF.html”- Nas páginas de multimédia, a galeria de fotos é a primeira onde é apresentado um pouco do jogo. Aqui utilizámos:</p>
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    Uma “flex-box” 3x3 de forma a termos uma grelha com imagens bem apresentadas e alinhadas;
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Em relação às imagens, para além de introduzirmos os links de onde estas foram retiradas, também colocámos descrições para os visitantes terem mais conteúdo descritivo.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><p>Vídeos/”multimédiaV.html”- Na página de multimédia de vídeos mostrámos 4 vídeos. O primeiro é à cerca da opinião de quem já jogou o jogo e se aconselha ou não a comprar o mesmo (Before you buy), o segundo vídeo mostra que prémio é que o jogo ganhou, o terceiro é um vídeo mais extenso onde os visitantes podem ver o jogo em si e, por último, é apenas um vídeo animado com piada. Este foi estruturado da seguinte forma:</p>
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    Os vídeos estão numa “flex-box” 2x2 para ficarem mais apresentáveis e acessíveis. Isto faz com que o visitante não tenha de percorrer exaustivamente o website.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><p>Quizz/”quizz.html”- Nesta penúltima página criou-se um pequeno questionário onde as pessoas podem testar um pouco o conhecimento sobre a respetiva série e sobre o jogo, como também poderão dar o seu feedback sobre o site e o jogo. Para tal utilizou-se:</p>
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    Um único formulário dividido em três partes com os “fieldset”, usámos algumas “radiobox”,” checkbox”,” range” e
+                                                    campos de texto livre (para a primeira parte, para a pergunta sobre o prémio e para o feedback sobre o jogo);
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Para a parte do “submit” utilizámos uma imagem adequada para o efeito.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><p>Acerca do website/”tabela.html”- Aqui estão apresentadas todas as partes obrigatórias do trabalho. Colocámos apenas nesta última página, porque achámos que não seria adequado integrar estas informações no resto do site. Para isto utilizou-se:</p>
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    A função de cascata de menu na parte do mapa do website;
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    “Printscreens” das estruturas dos layouts responsivos;
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    A “wordcloud” com hiperlinks para algumas das páginas do site e palavras relacionadas com o jogo;
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Tabelas onde estão as informações pedidas sobre o projeto com o auxílio de “printscreens”.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                    <br><h2>Mapa do website</h2>
+                        <ul>
+                            <li><a href="{% url 'projeto:index' %}" id="link" >Página Inicial</a>
+                                <ul>
+                                    <li><a href="{% url 'projeto:about' %}" id="link">Requerimentos</a></li>
+                                    <li><a href="{% url 'projeto:ourOpinion' %}" id="link">Nossa Opinião</a></li>
+                                    <li>Multimédia
+                                        <ul>
+                                            <li><a href="{% url 'projeto:multimediaF' %}" id="link">Imagens</a></li>
+                                            <li><a href="{% url 'projeto:multimediaV' %}" id="link">Videos</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'projeto:quizz' %}" id="link">Quiz</a></li>
+                            <li><a href="{% url 'projeto:tabela' %}" id="link">Acerca do Website</a></li>
+                        </ul>
+                    <br><h2>Layouts</h2>
+                            <figure><center><img src="{% static 'projeto/images/tlmv.png' %}" class="imgPrincipal1"></center><figcaption style="text-align: center;">Layout Telemóvel</figcaption></figure>
+                            <figure><center><img src="{% static 'projeto/images/pc.png' %}" class="imgPrincipal1"></center><figcaption style="text-align: center;">Layout Pc</figcaption></figure>
+                    <br><h2>Tabela de inventário</h2>
+                    <center>
+                        <table bgcolor="grey" border="1" cellpadding="10%" cellspacing="5" class="tabela" style="color: black;">
+                            <caption target="_cor">Informações básicas sobre o website</caption>
+                            <colgroup>
+                                <col span="7" bgcolor="lightgrey">
+                        </colgroup>
+                        <tr>
+                            <td colspan="2" rowspan="1" style="text-align:center;">Número de páginas</td>
+                            <td colspan="2" style="text-align:center;">7</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" rowspan="1" style="text-align:center;">Número de imagens</td>
+                            <td colspan="2" style="text-align:center;">23</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" rowspan="1" style="text-align:center;">Número de links externos</td>
+                            <td colspan="2" style="text-align:center;">17</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" rowspan="1" style="text-align:center;">Número de videos</td>
+                            <td colspan="2  " style="text-align:center;">5</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" rowspan="1" style="text-align:center;">Número de animações</td>
+                            <td colspan="2" style="text-align:center;">2</td>
+                        </tr>
+                        </table>
+                    </center>
+                    <br><h2 >Tabela Detalhada</h2>
+                    <div style="overflow-x:auto;">
+                        <table bgcolor="grey" border="1" cellpadding="10%" cellspacing="5" class="tabela" style="color: black;">
+                            <caption class="info-roma"target="_cor">Informações básicas sobre o Website.</caption>
+                                <colgroup>
+                                        <col span="99" bgcolor="lightgrey">
+                                </colgroup>
+                                <tr>
+                                    <td colspan="2" rowspan="2" style="text-align:center;">Layouts</td>
+                                    <td colspan="3" style="text-align:center;">Utilizamos um CSS grid.</td>
+                                    <td colspan="2" ><figure><img src="{% static 'projeto/images/gridprint.png' %}" alt="print grid" ></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Utilizamos dois CSS flexbox diferentes para imagens e videos.</td>
+                                    <td colspan="2" ><figure><img src="{% static 'projeto/images/flexImg.png' %}" alt="print flex"></figure><figure><img src="{% static 'projeto/images/flexVid.png' %}" alt="print flex" ></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" rowspan="2"  style="text-align:center;">Responsividade</td>
+                                    <td colspan="3" style="text-align:center;">Foram usadas media queries que adaptam o layout para telemovel e PC consoante o tamanho da janela do browser.</td>
+                                    <td colspan="2" ><figure><img src="{% static 'projeto/images/mediaQueries.png' %}" alt="Responsividade Tlmv"></figure><figure><img src="{% static 'projeto/images/mediaQueries1.png' %}" alt="Responsividade Tlmv" ></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Responsividade Letra</td>
+                                    <td colspan="2" ><figure><img src="{% static 'projeto/images/vw.png' %}" alt="Responsividade Texto"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" rowspan="7" style="text-align:center;">Seletores</td>
+                                    <td colspan="3" style="text-align:center;">Universal</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/universal.png' %}" alt="universal"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Tipo</td>
+                                    <td colspan="2" ><figure><img src="{% static 'projeto/images/tipo.png' %}" alt="tipo"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Classe</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/classe.png' %}" alt="classe"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Id</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/id.png' %}" alt="id"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Atributo</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/atributo.png' %}" alt="atributo"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Pseudo-Classe</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/pseudo-classe.png' %}" alt="pseudo-classe"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Pseudo-elemento</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/pseudo-elemento.png' %}" alt="pseudo-elemento"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" rowspan="12" style="text-align:center;">Etiquetas</td>
+                                    <td colspan="3" style="text-align:center;">Article</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/article.png' %}" alt="article"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Aside</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/aside.png' %}" alt="aside"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Audio</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/audio.png' %}" alt="audio"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">FigCaption & Details</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/figdetails.png' %}" alt="figcaption & Details"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Figure</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/figure.png' %}" alt="Figure"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Footer</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/footer.png' %}" alt="Footer"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Header</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/header.png' %}" alt="header"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Main</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/main.png' %}" alt="main"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Nav</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/nav.png' %}" alt="nav"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Output</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/output.png' %}" alt="Output"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Svg</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/svg.png' %}" alt="svg"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Figure</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/figure.png' %}" alt="Figure"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" rowspan="2" style="text-align:center;">Animações</td>
+                                    <td colspan="3" style="text-align:center;">Primeira Animação</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/animacao1.png' %}" alt="Primeira animação"></figure></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:center;">Segunda Animação</td>
+                                    <td colspan="2"><figure><img src="{% static 'projeto/images/animacao2.png' %}" alt="Segunda animação"></figure></td>
+                                </tr>
+                        </table>
+                    </div>
+
+                    <br><h2>Video de apresentação</h2>
+                    <center>
+                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/kXuw6V8gmJY" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </center>
+                </main>
+            </div>
+
+{% endblock %}

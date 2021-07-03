@@ -1,0 +1,92 @@
+{% extends 'projeto/base.html' %}
+{% load static %}
+{% block main %}
+ <div class=" main">
+                <main>
+                {% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+                    <form method="POST" enctype="multipart/form-data">      <!--enctype="multipart/form-data" necessary to process files uploaded by user  -->
+                    {% csrf_token %}                                        <!-- necessary in django whenever using forms, protects against sql injections -->
+                        <center> <br><h2>Informações básicas</h2> </center>
+                         <br>
+                        <fieldset>
+                        {{ formContact.as_p }}          <!-- the Contact form sent from view  -->
+
+                        </fieldset>
+                        <br><br>
+                     <center><h2>Quiz sobre o jogo a saga e este website</h2></center>
+                         <fieldset class="quizz">
+                             {% for obj in obj %}                                   <!-- loop to render all questions and choices here -->
+                                 <p class="textoTamanho">{{ obj.Question }}</p>
+                                {% if obj.Type == 'choice' %}
+                                     <input type="radio" id="R1" name="{{ obj.Question }}" value="{{ obj.ChoiceOne }}"></span>
+                                         <span><label for="R1">{{ obj.ChoiceOne }}</label>
+                                             <br><input type="radio" id="R2" name="{{ obj.Question }}" value="{{ obj.ChoiceTwo }}"></span>
+                                                 <span><label for="R2">{{ obj.ChoiceTwo }}</label>
+                                                     <br><input type="radio" id="R3" name="{{ obj.Question }}" value="{{ obj.ChoiceThree }}"></span>
+                                                         <span><label for="R3">{{ obj.ChoiceThree }}</label>
+                                                             <br><input type="radio" id="R4" name="{{ obj.Question }}" value="{{ obj.ChoiceFour }}"></span>
+                                                                 <span><label for="R4">{{ obj.ChoiceFour }}</label>
+                                {% elif obj.Type == 'input'%}               <!-- condition to check whether answer is option type or input type -->
+                                     <label for="AnoPublicacao"></label>
+                                         <input type="text" id="Campeonatos" name="{{ obj.Question }}">
+                                         <br> <br>
+                                {% endif %}
+                             {% endfor %}
+
+{#                                    <!-- Suggestion form sent from view -->#}
+                                  <p class="textoTamanho">De 0 a 100, quanto gostaram deste website?</p>
+                                      {{ formSuggestion.Score }}
+                             <p class="textoTamanho">Usamos o esquema de cores que se segue em baixo, se achar que existem outras opções melhores escolha um esquema diferente e envie a sua sugestão.</p>
+                             <p class="textoTamanho">Primária:</p>
+                                        {{ formSuggestion.Primary }}
+                            <p class="textoTamanho">Secundária:</p>
+                                        {{ formSuggestion.Secondary }}
+                            <p class="textoTamanho">Texto:</p>
+                                        {{ formSuggestion.Text }}
+                         </fieldset>
+                         <br>
+                    <center> <h2>Se tiver jogado "Wolfenstein 2-The New Colossus" responda às seguintes questões</h2> </center>
+                 <fieldset>
+
+
+                         <p class="textoTamanho">De 0 a 100, quanto gostou deste jogo?</p>
+                            {{ formComment.Likeness  }}             <!-- to maintain your styling rendering each field of this form separately -->
+                                 <br> <br>
+
+                     <br><p class="textoTamanho">Em  termos de jogabilidade o que achou?</p>
+                            {{ formComment.GamePlayComment }}
+                                 <br> <br>
+
+                     <p class="textoTamanho">Deixe aqui as suas opiniões.</p><br>
+                            {{ formComment.Opinion }}
+                         <p class="textoTamanho">Qualquer sugestão mais complexa submeta via ficheiro .txt</p>
+                            {{ formComment.File }}
+                         <br> <br>
+
+                         <p class="textoTamanho">Recomendariam este jogo aos seus amigos?</p>
+                            {{ formComment.Recommend }}
+                                         <br> <br>
+
+                     <input type="image" src="{% static 'projeto/images/submit.png' %}" alt="Submit" width="120" height="120" >
+
+                 </fieldset>
+                    </form>
+                </main>
+            </div>
+    {% if graph %}              <!-- condition to check if graph was sent by view -->
+        {{ graph | safe }}
+    {% endif %}
+{% endblock %}

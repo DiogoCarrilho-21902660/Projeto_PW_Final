@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>:dart:</text></svg>">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css%22%3E">
+    <style>
+        .parallax {
+            background-image: url('{% static "projeto/images/wolfensteinheader.jpg" %}');
+            min-height: 800px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+    <meta name="description" content="Wolfenstein2">
+    <meta name="description" content="Machine Games">
+    <meta name="description" content="Bethesda Softworks">
+    <meta name="description" content="Release Date: 27 de outubro de 2017">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'projeto/images/iconwolf.png' %}"/>
+    <link rel="stylesheet" href="{% static 'projeto/css/estilos.css' %}">
+    <title>Wolfenstein 2</title>
+</head>
+<body>
+<div class="parallax"></div>
+<div class="grid-container">
+    <div class="header">
+        <header>
+            <center>
+                <h1>Wolfenstein 2</h1>
+                <h1 style="font-size:1.2vw">"The New Colossus"</h1>
+            </center>
+        </header>
+    </div>
+    <div class="nav">
+        <nav>
+            <div class="topnav">
+                <a id="link" href="{% url 'projeto:index' %}"><i style="font-size:20px;color:red;"
+                                                                 class="material-icons">&#xe88a;</i>Introdução</a>
+                <a id="link" href="{% url 'projeto:about' %}"><i style="font-size:20px;color:red;"
+                                                                 class="material-icons">&#xe88e;</i>Acerca do jogo</a>
+                <a id="link" href="{% url 'projeto:ourOpinion' %}"><i style="font-size:20px;color:red;"
+                                                                      class="material-icons">&#xe7fb;</i>Nossa
+                    Opinião</a>
+                <a id="link" href="{% url 'projeto:multimediaF' %}"><i style="font-size:20px;color:red;"
+                                                                       class="material-icons">&#xe413;</i>Imagens</a>
+                <a id="link" href="{% url 'projeto:multimediaV' %}"><i style="font-size:20px;color:red;"
+                                                                       class="material-icons">&#xe63a;</i>Vídeos</a>
+                <a id="link" href="{% url 'projeto:quizz' %}"><i style="font-size:20px;color:red;"
+                                                                 class="material-icons"> &#xe85a;</i>Quizz</a>
+                <a id="link" href="{% url 'projeto:tabela' %}"><i style="font-size:20px;color:red;"
+                                                                  class="material-icons">&#xe8b8;</i>Acerca do
+                    Website</a>
+            </div>
+        </nav>
+    </div>
+    <div class="main">
+        <main>
+            {% block main %}
+
+            {% endblock %}
+        </main>
+    </div>
+    <div class="aside">
+        <aside>
+            <center>
+                <h2>Onde comprar</h2> <br><br>
+
+                <figure><img src="{% static 'projeto/images/steam.png' %}" title="wolfheader" class="imgPrincipal">
+                </figure>
+                <svg width="125" height="100"
+                     xmlns="https://store.steampowered.com/app/612880/Wolfenstein_II_The_New_Colossus">
+                    <a href=https://store.steampowered.com/app/612880/Wolfenstein_II_The_New_Colossus>
+                        <text x="36" y="25" fill="white">
+                            STEAM
+                            <animate attributeName="fill" from="white" to="silver" dur="10s" repeatCount="indefinite"/>
+                        </text>
+                    </a>
+                </svg>
+
+                <figure><img src="{% static 'projeto/images/Micro.png' %}" title="wolfheader" class="imgPrincipal">
+                </figure>
+                <svg width="125" height="100" xmlns="https://shorturl.at/wKX29">
+                    <a href=https://shorturl.at/wKX29>
+                        <text x="17" y="25" fill="red">
+                            MICROSOFT
+                            <animate attributeName="fill" from="cyan" to="yellow" dur="10s" repeatCount="indefinite"/>
+                        </text>
+                    </a>
+                </svg>
+                <figure><img src="{% static 'projeto/images/ps.png' %}" title="wolfheader" class="imgPrincipal">
+                </figure>
+                <svg width="125" height="100"
+                     xmlns="https://store.playstation.com/pt-pt/product/EP1003-CUSA07378_00-COLOSSUSFULLGAME">
+                    <a href=https://store.playstation.com/pt-pt/product/EP1003-CUSA07378_00-COLOSSUSFULLGAME>
+                        <text x="10" y="25" fill="white">
+                            PLAYSTATION
+                            <animate attributeName="fill" from="white" to="#0b85d6" dur="10s" repeatCount="indefinite"/>
+                        </text>
+                    </a>
+                </svg>
+
+                <figure><img src="{% static 'projeto/images/istant.png' %}" title="wolfheader" class="imgPrincipal">
+                </figure>
+                <svg width="145" height="100"
+                     xmlns="https://www.instant-gaming.com/pt/2135-comprar-jogo-steam-wolfenstein-ii-the-new-colossus">
+                    <a href=https://www.instant-gaming.com/pt/2135-comprar-jogo-steam-wolfenstein-ii-the-new-colossus>
+                        <text x="5" y="50" fill="white">
+                            INSTANT-GAMING
+                            <animate attributeName="fill" from="white" to="orange" dur="10s" repeatCount="indefinite"/>
+                        </text>
+                    </a>
+                </svg>
+            </center>
+        </aside>
+    </div>
+    <div class="article" style="text-align: center;">
+        <article>
+            <h2 class="corArticle">Score e Reviews</h2> <br><br>
+
+            <figure><img src="{% static 'projeto/images/IGN.png' %}" title="ign" class="element-animation">
+                <details><a id="link"
+                            href=https://www.ign.com/articles/2017/10/28/wolfenstein-2-the-new-colossus-review>Link
+                    Review</a></details>
+            </figure>
+            <figure><img src="{% static 'projeto/images/ignscore.png' %}" title="ignscore" class="element-animation2">
+            </figure>
+            <br><br><br><br><br><br>
+
+            <figure><img src="{% static 'projeto/images/meta.png' %}" title="meta" class="element-animation">
+                <details><a id="link" href=https://www.metacritic.com/game/pc/wolfenstein-ii-the-new-colossus>Link
+                    Review</a></details>
+            </figure>
+            <figure><img src="{% static 'projeto/images/metascore.png' %}" title="ignscore" class="element-animation2">
+            </figure>
+            <br><br>
+        </article>
+    </div>
+</div>
+
+<div class="parallax"></div>
+<div class="footer">
+    <footer>
+        Universidade Lusofona de Humanidades e Tecnologias 2020/2021
+    </footer>
+</div>
+</body>
+</html>

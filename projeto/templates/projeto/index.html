@@ -1,0 +1,53 @@
+{% extends 'projeto/base.html' %}
+{% load static %}
+{% block main %}
+    <div class="main">
+        <main>
+            <center>
+                <br>
+                <h2>Gameplay Trailer</h2><br><br>
+                <div class="container">
+                    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/bkrwUzWeACg"></iframe>
+                </div>
+                <!--Autoplay nao funciona no Google Chrome devido a definições de segurança-->
+                <h2 class="corArticle">SoundTrack</h2>
+                <audio controls loop autoplay id="musica" class="player">
+                    <source src="{% static 'projeto/audio/musica.ogg' %}" type="audio/ogg">
+                    <source src="{% static 'projeto/audio/musica.mp3' %}" type="audio/mpeg">
+                </audio>
+                <br>
+                <button onclick="enableLoop()" type="button">Ativar loop</button>
+                <button onclick="disableLoop()" type="button">Desativar loop</button>
+                <button onclick="checkLoop()" type="button">Estado Loop</button>
+                <script> //Criação de 3 botões que permitem ativar/desativar o loop da música e tambem ver o estado do loop
+                    var audio = document.getElementById("musica");
+                    function enableLoop() {
+                        audio.loop = true;
+                        alert("Loop Ativado");
+                        audio.load();
+                    }
+                    function disableLoop() {
+                        audio.loop = false;
+                        alert("Loop Desativado");
+                        audio.load();
+                    }
+                    function checkLoop() { // Vê se o loop está ativo ou desativo e mostra um alerta
+                        alert(audio.loop);
+                    }
+                    audio.volume = 0.01; // Põe audio da música por default a 1%
+                </script>
+
+                <h2>Síntese da história</h2>
+                <p class="textoTamanho">A nova geração da antiga série Wolfenstein leva os jogadores a um mundo paralelo
+                    da segunda guerra mundial onde os nazis terão ganho,
+                    com o trunfo de terem obtido uma vantagem tecnológica absoluta sobre os aliados e demais fações.<br>
+                    Wolfenstein II: The new Colossus Será o segundo jogo desta nova reinvenção da série que continua a
+                    história onde esta foi deixada depois do primeiro jogo após o assassinato do General Deathshead.<br>
+                    Mas desta vez não será na europa nazi deste universo, mas sim nos territórios ocupados dos EUA,
+                    onde BJ Blazkowicz (Terror-Billy para os nazis) irá se deparar com os horrores que o final da guerra
+                    trouxe e a consequente subjugação e opressão do último país dos aliados a render-se.<br>
+                </p>
+            </center>
+        </main>
+    </div>
+{% endblock %}
