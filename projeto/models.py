@@ -6,9 +6,9 @@ import datetime
 
 # Create your models here.
 
-# Contact Class to store Users Name, SurName, Email. Change verbose_name values if you want to show field names in Portuguese
+# Contact Class to store Users Name, SurName, Email.
 class Contact(models.Model):
-    Name = models.CharField(max_length=128, default='Nome', verbose_name='Nome')     # change verbose name of each field to what you want to be displayed in frontend
+    Name = models.CharField(max_length=128, default='Nome', verbose_name='Nome')     #mudar o que ta dentro do verbose_name para modificar na frontend
     SurName = models.CharField(max_length=128, default='Apelido', verbose_name='Apelido')
     Email = models.EmailField(default='exemplo@exemplo.com')
     Phone = PhoneNumberField(default='+351961234567', verbose_name='Contacto')

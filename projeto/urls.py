@@ -13,5 +13,4 @@ path('multimediaV/', views.multimediaV_page_view, name='multimediaV'),
 path('quizz/', views.quizz_page_view, name='quizz'),
 path('tabela/', views.tabela_page_view, name='tabela'),
 
-
 ]
